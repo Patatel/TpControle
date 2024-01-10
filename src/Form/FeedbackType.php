@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -29,7 +30,8 @@ class FeedbackType extends AbstractType
                 ]
             ])
             ->add('commentaire', TextType::class)
-            ->add('dateSoumission', DateType::class)
+            ->add('dateSoumission', TextType::class)
+            ->add('submit', SubmitType::class)
         ;
     }
 

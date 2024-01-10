@@ -5,10 +5,10 @@
     <h1>Product List</h1>
     <ul>
 
-    {% for products in product %}
-        <li>{{ products.nom }}&nbsp;{{ products.prix }} : [ <a href="{{
-        path('product_edit', {'id': products.id}) }}">Edit</a> - <a href="{{ path('product_delete',
-        {'id': products.id}) }}">Delete</a> - <a href="{{ path('feedback') }}">Feedback</a> ]</li>
+    {% for product in products %}
+        <li>{{ product.nom }}&nbsp;{{ product.prix }} : [ <a href="{{
+        path('product_edit', {'id': product.id}) }}">Edit</a> - <a href="{{ path('product_delete',
+        {'id': product.id}) }}">Delete</a> - <a href="{{ path('feedback') }}">Feedback</a> ]</li>
     {% endfor %}
 
     </ul>
