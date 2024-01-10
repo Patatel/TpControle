@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Feedbacks List</h1>
+    <ul>
+
+    {% for feed in feedbacks %}
+        <li>{{ feed.nomProduit }}&nbsp;{{ feed.nomClient }}&nbsp;{{ feed.dateSoumission }}&nbsp;{{ feed.noteProduit }}&nbsp;{{ feed.commentaire }} : [ <a href="{{
+        path('feedback_edit', {'id': feed.id}) }}">Edit</a> - <a href="{{ path('feedback_delete',
+        {'id': feed.id}) }}">Delete</a>]</li>
+    {% endfor %}
+    
+{% endblock %}
