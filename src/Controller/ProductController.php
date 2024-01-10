@@ -10,7 +10,7 @@ use App\Entity\Product;
 
 class ProductController extends AbstractController
 {
-    #[Route('/product', name: 'product_list')]
+    #[Route('/products', name: 'product_list')]
     public function list(ManagerRegistry $doctrine): Response
     {
         $repository = $doctrine->getRepository(Product::class);
